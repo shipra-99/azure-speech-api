@@ -14,7 +14,7 @@ async function transcribeShortAudio(buffer, language = 'en-US') {
   const response = await axios.post(url, buffer, {
     headers: {
       'Ocp-Apim-Subscription-Key': speechKey,
-      'Content-Type': 'audio/wav', // adjust to your format
+      'Content-Type': 'audio/wav',
       'Accept': 'application/json'
     },
     maxBodyLength: Infinity
